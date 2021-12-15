@@ -15,8 +15,6 @@ module.exports = merge(common, {
     filename: 'js/[name].[contenthash].bundle.js',
   },
     
-  // Production: Magic happen here transpiling to es5 to partly support older browser like IE11
-  //target: ['web', 'es5'], 
   
   plugins: [
     // Extracts CSS into separate files

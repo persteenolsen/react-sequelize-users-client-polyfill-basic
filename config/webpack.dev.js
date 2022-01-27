@@ -19,6 +19,7 @@ module.exports = merge(common, {
   // ENABLE "target: 'web'"  for use Hot Reload / HMR in Crome ( not in IE 11 )
   // DISABLE "target: 'web'" for use IE 11 during testing => Hot Reload / HMR will stop working in Chrome due to a bug in Webpack 5
   target: 'web', 
+ // target: ['web', 'es5'], 
 
   // Spin up a server for quick development
   devServer: {

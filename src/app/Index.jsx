@@ -20,7 +20,8 @@ function App() {
 
     useEffect(() => {
         const subscription = accountService.user.subscribe(x => setUser(x));
-        return subscription.unsubscribe;
+	   return subscription.unsubscribe;
+	  
     }, []);
 
     return (

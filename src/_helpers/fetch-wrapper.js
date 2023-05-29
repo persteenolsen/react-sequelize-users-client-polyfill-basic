@@ -80,8 +80,7 @@ function authHeader(url) {
 }
 
 function handleResponse(response) {
-	
-		
+			
     return response.text().then(text => {
 		
         const data = text && JSON.parse(text);
@@ -93,8 +92,7 @@ function handleResponse(response) {
                 // Auto logout if 401 Unauthorized or 403 Forbidden response returned from api
                 accountService.logout();
             }
-            
-					   
+           					   
 		    var error = "Please try again, there was an error - default!";
 			error = (data && data.message) || response.statusText;
 						

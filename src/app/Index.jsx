@@ -17,7 +17,7 @@ import { ErrorPage } from '@/ErrorPage';
 function App() {
     const { pathname } = useLocation();  
     const [user, setUser] = useState({});
-
+	
     useEffect(() => {
         const subscription = accountService.user.subscribe(x => setUser(x));
 	   return subscription.unsubscribe;
@@ -25,10 +25,15 @@ function App() {
     }, []);
 
     return (
+	   
+
         <div className={'app-container' + (user && ' bg-light')}>
             <Nav />
             <Alert />
+			
             <Switch>
+			   								
+			    				
                 <Redirect from="/:url*(/+)" to={pathname.slice(0, -1)} />
                 <PrivateRoute exact path="/" component={Home} />
                 <PrivateRoute path="/profile" component={Profile} />

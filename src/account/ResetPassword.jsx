@@ -18,7 +18,11 @@ function ResetPassword({ history }) {
 
     useEffect(() => {
         const { token } = queryString.parse(location.search);
-
+						
+		 // TEST
+		 alert('ResetPassword - Pathname: ' + location.pathname );
+		 alert('ResetPassword - Token: ' + token );
+		
         // remove token from url to prevent http referer leakage
         history.replace(location.pathname);
 
